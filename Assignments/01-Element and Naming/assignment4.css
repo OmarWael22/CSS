@@ -1,0 +1,20 @@
+/* not good */
+.user-name {
+  /* Add your styles here */
+}
+
+/* good pascal  */
+.UserName {
+}
+
+/* good kebab */
+.user-name {
+}
+
+/* good camel */
+.userName {
+}
+
+/* bad */
+.usernameprofile {
+}

@@ -1,0 +1,43 @@
+
+.assign-1{
+    padding : 5%;
+    margin : 5%;
+    border : 3px solid rgb(44, 236, 14);
+    text-align: center;
+}
+.assign-1 p{
+    border : inherit;
+    padding: inherit;
+    margin : inherit;
+    background-color: seashell;
+}
+.assign2-1{
+    padding : 5%;
+    margin : 5%;
+    border : 3px solid rgb(44, 236, 14);
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-style: italic;
+}
+.assign2-2{
+    padding : 5%;
+    margin : 5%;
+    border : 3px solid rgb(44, 236, 14);
+    text-align: center;
+    font-family: "cairo", sans-serif;
+    font-weight: 700;
+    font-size: large;
+}
+.assign2-3{
+    padding : 5%;
+    margin : 5%;
+    border : 3px solid rgb(44, 236, 14);
+    text-align: center;
+    font-family: "jomhuria", sans-serif;
+    font-style: italic;
+    font-size: large;
+}
+.assign3-1{
+    font-size: 2.5rem;
+}

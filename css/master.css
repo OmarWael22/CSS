@@ -1,0 +1,124 @@
+/*
+block
+-- take full width if no width is given
+-- add line break before and after
+-- respect margin and padding
+*/
+
+/* 
+inline
+-- donot respect width , height
+-- donot add line break
+-- respect margin and padding in horizontal direction only
+-- accept element beside it
+ */
+ /*
+ inline-block
+ -- respect width , height
+ -- donot add line break
+ -- respect margina and padding
+ -- accept element beside it   
+ */
+
+
+.block-div {
+    /* background-color: red; */
+    /* color:red green blue alpha channel; */
+    /* background-color: rgb(154 94 94 / 0.5);
+    background-image: url(../hellohtml.png);
+    background-repeat: no-repeat; */
+    /* background-attachment: fixed; */
+    /* background-position: 423px 50%; */
+    /* background-size: contain or cover or auto; */
+    /* background-size: 300px 50%; */
+    /* top right bottom left*/
+    padding : 20px 50px; /* padding for text in side a block */
+    padding-bottom: 40px;
+    margin : 20px 50px;  /* margin for the block itself */
+    width : 70% ;
+    margin-left: auto;
+    margin-right: auto;
+    /* border-width: 5px 10px;
+    border-color: red;
+    border-style: solid; */
+    border :  blue solid 10px ; 
+    /* display: none;   */
+    visibility: hidden;
+}
+span{
+    background-color: thistle;
+    width: 200px ;
+    padding : 5px;
+    border : 2px solid black;
+    margin:5px;
+     display: inline-block; 
+
+}
+
+
+
+/* target all paragraph */
+
+/* class */
+.my-p{
+    color : blue;
+    font-size : 20px
+}
+/* id */
+#my-id{
+    color : green;  
+    font-size : 30px
+}
+
+/* shadow : H-shadow V-shadow blur color*/
+
+/* div{
+    background-color: rgb(189, 120, 189);
+    text-shadow: 1px 1px 1px rgb(240, 42, 42) ;
+    text-align: left;
+    direction : ltr;
+    text-decoration:  wavy underline;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-indent: 50px;
+    line-height: 1.5;
+    width : 200px ; 
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+} */
+div:hover{
+    overflow:visible;
+}
+/* css font units
+1. px
+2. em -- times the current font size
+3. rem -- times the root font size
+4. view port width (vw) -- 1% of the viewport width */
+
+body{
+  font-family: "Cairo", serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+button{
+    cursor: pointer;
+}
+.parent{
+    background-color: aquamarine;
+    padding: 2%;
+    ;
+}
+.parent div{
+    background-color: aliceblue;
+    float: left;
+    width : 25%;
+    text-align: center;
+    opacity: 0.5;
+}
+.clear{
+    clear: both;
+}
