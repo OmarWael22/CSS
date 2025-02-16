@@ -1,0 +1,169 @@
+.assign-1{
+    background-color: rgb(167, 107, 107);
+    width: fit-content;
+   /* width: 200px; */
+   height: 250px;
+}
+.red ,.green ,.blue , .black{
+    width: 200px;
+    height: 200px;
+    margin : 40px;
+    position: absolute;
+}
+.green{
+    background-color: green;
+    top:40px;
+    left:40px;
+    z-index: 2;
+
+}
+.black{
+    background-color: black;
+    top:40px;
+    left:20px;
+    z-index : -1;
+}
+.blue{
+    background-color: blue;
+    top:20px;
+    left:20px;
+
+}
+.red{
+    background-color: red;
+    z-index: 3;
+    top: 60px;
+    left:60px;
+}
+.clear{
+    clear: both;
+    position: static;
+}
+hr{
+    border : 1px solid black;
+    margin : 5%
+} 
+.assign-2{
+    background-color: gainsboro;
+    width : 400px ;
+    position: relative;
+    margin: auto;
+    padding: 4%;
+    border : 3px solid ;
+    border-color: red blue;
+    line-height: 1.8;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 50px;
+    
+}
+.top-left , .top-right , .bottom-left , .bottom-right {
+    background-color: blue;
+    padding : 5px 25px;
+    width : 20px;
+    height: 30px;
+    position: absolute;
+    
+    display: inline-block;
+    color : white;
+}
+.top-left{
+    position: absolute;
+    top : 0 ;
+    left:0;
+    transform: translate(-50%,-50%);
+    border-right: 3px solid red;
+    
+}
+.top-right{
+    top: 0;
+    right:0;
+    transform: translate(50%,-50%);
+    border-left: 3px solid red ;
+
+}
+.bottom-left{
+    left: 0;
+    bottom: 0;
+    transform: translate(-50%,50%);
+    border-right: 3px solid red;
+
+
+}
+.bottom-right{
+    right: 0;
+    bottom: 0;
+    transform: translate(50%,50%);
+    border-left: 3px solid red ;
+}
+.main-list{
+    list-style: none;
+    padding-left: 0px;
+    width:400px;
+}
+.main-list li {
+    margin:2%;
+    background-color: gainsboro;
+    padding: 2%
+}
+.main-list .sub-list {
+    padding-left: 10%;
+}
+
+.main-list .sub-list li{
+    background-color: white;
+    margin:2%;
+    padding-left: 10px;
+}
+
+.sub-1{
+    list-style-type: decimal;
+    
+}
+.sub-2{
+    list-style-type: upper-roman;
+}
+.sub-3{
+    list-style-position: inside;
+}
+table{
+    text-transform: capitalize;
+    width : 700px;
+    margin:auto;
+    text-align: center;
+    border-spacing:2px ;
+    border-bottom: 2px solid green;
+    
+
+}
+
+table td {
+   border : 1px solid rgb(226, 224, 224);
+   background-color: rgb(235, 234, 234);
+   padding: 1%;
+}
+table th {
+    background-color: rgb(68, 67, 67);
+    color:white;
+   
+    padding: 2%;
+    border:5px solid rgb(68, 67, 67);
+}
+.but-1{
+    background-color: rgb(41, 141, 208) ;
+}
+.but-2{
+    background-color: #dd2f49;
+}
+.but-1 , .but-2 {
+    color:white;
+    border-color: gainsboro;
+    padding : 6%;
+    margin: 2%;
+}
+caption{
+    margin-bottom: 2%;
+}
+.head-row{
+    background-color: #535151;
+}
