@@ -1,0 +1,67 @@
+.assign-1{
+    background-color: gainsboro;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 50px;
+    transition: all 0.5s;
+    text-transform: capitalize;
+}
+.assign-1 .parent .child{
+    background-color: rgb(242, 241, 241);
+    padding: 15px;
+    margin: 10px;
+    transition: all 0.5s 0.5s ;
+}
+.assign-1:hover{
+    margin-top: 20px;
+}
+.assign-1:hover .parent .child{
+    margin-top: 40px;
+}
+hr{
+    border: 1px solid black;
+    margin :  30px  0;
+}
+.assign-2 {
+    width: 400px ;
+    position: relative;
+    left : 50% ; 
+    transform : translate(-50%);
+    font-size: 20px !important;
+    background-color: rgb(239, 239, 239)  !important;
+    color : black !important;
+    border: none !important;
+    /* display: none ; */
+
+}
+.assign-2::first-line {
+    visibility: hidden;
+}
+.assign-2::before{
+    content: "Elzero";
+    visibility: visible ;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+:root {
+  --mainColor: #009688;
+  --mainPadding: 10px;
+  --mainMargin: 10px;
+  
+}
+
+.assign-3 div  {
+  color: var(--mainColor,red);
+  border : 3px solid var(--mainColor,black);
+  padding: var(--mainPadding,10px);
+  margin: var(--mainMargin,10px);
+  font-size: 20px;
+}
