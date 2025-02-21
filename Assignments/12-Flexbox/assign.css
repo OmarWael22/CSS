@@ -71,15 +71,16 @@ hr{
 }
 .assign-3 .three{
     height: 15%;
-    order: 4;
+    order: 2;
     align-self: flex-end;
 
 }
 .assign-3 .four{
-    order : 3
+    order : 1
 }
-.assign-3 .five{
-    order : 2
+
+.assign-3 .six{
+    order:3;
 }
 /***********************************************************/
 .assign-4{
