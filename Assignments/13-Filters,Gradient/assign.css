@@ -1,0 +1,78 @@
+.assign-1{
+    position: relative;
+    width: 600px;
+    display: flex;
+    background-color: #EEE;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 80px;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 5px;
+    border-left: 8px  solid #f44336 ;
+    border-right: 8px  solid #9c27b0;
+
+}
+.assign-1::before{
+    content: "";
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    /* background-color: #9c27b0; */
+    background-image: linear-gradient(to right,#f44336 20% , #2196f3 20%,#2196f3 40%,#4caf50 40% ,#4caf50 60%,#e91e63 60%,#e91e63 80%,#9c27b0 80%);
+    left: 0;
+    top: 0;
+}
+
+.assign-1::after{
+    content: "";
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    /* background-color: #9c27b0; */
+    background-image: linear-gradient(to right,#f44336 20% , #2196f3 20%,#2196f3 40%,#4caf50 40% ,#4caf50 60%,#e91e63 60%,#e91e63 80%,#9c27b0 80%);
+    left: 0;
+    bottom: 0;
+}
+.assign-1 span::first-letter{
+    color: red;
+    font-size: 50px; /* Optional: adjust the size of the first letter */
+}
+hr{
+    margin: 25px 0;
+    border: 2px solid;
+}
+
+/* Style for the input container */
+.input-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Style for the input field */
+input {
+    display: block;
+    width: 600px;
+    background-color: #EEE;
+    margin: auto;
+    height: 40px;
+    padding-left: 15px;
+    caret-color: red;
+    outline: none;
+    border: none;
+}
+
+/* Add the gradient line below the input */
+.input-container::before {
+    content: "";
+    background-image: linear-gradient(to right, red 50%, blue 50%);
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
