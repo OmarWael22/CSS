@@ -45,7 +45,7 @@ inline
     /* display: none;   */
     visibility: hidden;
 }
-span{
+/* span{
     background-color: thistle;
     width: 200px ;
     padding : 5px;
@@ -53,7 +53,7 @@ span{
     margin:5px;
      display: inline-block; 
 
-}
+} */
 
 
 
@@ -87,27 +87,27 @@ span{
     white-space: nowrap;
     text-overflow: ellipsis;
 } */
-div:hover{
+/* div:hover{
     overflow:visible;
-}
+} */
 /* css font units
 1. px
 2. em -- times the current font size
 3. rem -- times the root font size
 4. view port width (vw) -- 1% of the viewport width */
 
-body{
+/* body{
   font-family: "Cairo", serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
   font-variation-settings:
     "slnt" 0;
-}
-button{
+} */
+/* button{
     cursor: pointer;
-}
-.parent{
+} */
+/* .parent{
     background-color: aquamarine;
     padding: 2%;
     ;
@@ -118,7 +118,290 @@ button{
     width : 25%;
     text-align: center;
     opacity: 0.5;
-}
+} */
 .clear{
     clear: both;
 }
+/* position 
+1- static
+2- - relative
+3- absolute
+4- fixed
+5- sticky */
+/* table{ */
+    /* border : 1px solid blue; */
+    /* width : 100%;
+    text-align: center; */
+    /* border-spacing: 10px; */
+     
+
+/* table td , table th{
+    background-color: gainsboro;
+    padding : 2%;
+    border : 1px solid gainsboro;
+   
+}  */
+.txt{
+    background-color: gainsboro;
+    padding : 2%;
+    margin : 5%;
+    position: relative;
+}
+/* pseudo classes */
+a:hover{
+    color : rgb(255, 0, 0) ;
+}
+
+.ch:checked  + label{
+    color : green;
+}
+
+/* pseudo elements */
+.txt::first-letter{
+    font-size: 30px;
+    font-weight: bold;
+    background-color: blue;
+}
+
+::selection{
+    background-color: blueviolet;
+}
+.txt::before{
+
+    content:"";
+    width:10px;
+    height:100%;
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    top:0;
+    left:-10px;
+}
+
+.child{
+    background-color: gainsboro;
+    margin:2% ;
+    padding: 2%;
+    width:50%;
+    counter-increment: n-child;
+}
+.child::after{
+    content: counter(n-child);
+    background-color: brown;
+    color: white;
+    margin-left: 10px;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+.child::before{
+    content: attr(my-attr);
+    display: none;
+    background-color: green ;
+}
+.child:hover::before{
+    display: block;
+}
+
+.off{
+    background-color: gainsboro;
+    width: 300px;
+    height: 200px;
+    /* transition-duration: 2s;
+    transition-delay: 0.5s;
+    transition-property: all; */
+    /* transition-timing-function: ; */
+    transition: margin 2s 0.5s linear , width 4s 0.5s  ;
+}
+/* div:hover{
+    margin: 50px;
+    width: 500px;
+} */
+
+/* important declaration */
+/* .off{
+    background-color: red !important;
+} */
+
+/* margin collapse*/
+/*
+[1] vertical margin only collapse (override)
+[2] margin collapse only if the two element is connected (has no sepration)
+[3] nesting doesnot prevent collapsing 
+*/
+
+/*
+-- CSS Variables
+global variable
+local variables
+*/
+
+/* global var */
+:root{
+    /*variable name*/
+    --mainColor : blue ;
+}
+
+.var{                            /* fallback value */
+    background-color: var(--mainColor,black);
+    color: white;
+    /* local var */
+    --subColor : red ;
+}
+.par{
+    background-color: gainsboro;
+    width: 500px;
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow:  row wrap;
+    /* horizontal centering*/
+    justify-content: space-between; 
+    /* vertical centering*/
+    /* align-items: center; */
+    /* align-content: center; */
+    
+
+}
+/* child */
+.par div {
+    background-color: rgb(128, 189, 242);
+    margin: 2%;
+    /* width: 10%; */
+    /* 
+    flex-grow: 1 ;
+    flex-shrink: 1;
+    order: 1 ; 
+    */
+    /* width or height depends on direction*/
+    flex-basis: 20%;
+    /* flex: flex grow  flex shrink  flex basis  0 1 auto; */
+    /* display: inline flex */
+    /* align-self: center ; */
+    
+}
+/* img{
+    filter: grayscale(100%);
+    filter: blur(3px);
+    transition: 0.5s;
+}
+img:hover{
+    filter: grayscale(0%);
+    filter: blur(0);
+} */
+
+/* Gradient */
+/* linear-grad(angle , color stop 1 , color stop 2 , ....)*/
+/* caret color ---> cursor color */
+/* pointer-event : none */
+/************************************************************/
+/*
+Grid 
+parent
+    display : grid || inline grid
+    grid-template-columns => [number of column in] , [px , % ,auto , fraction , repeat(no , size) ]
+    grid-template-row =>  100px 200px , same as columns 
+    grid-template =>
+    row-gap =>
+    column-gap =>
+    gap => column-gap , row-gap
+
+child
+    grid-column => start / end or span ncol  --> determine howmuch col this element takes
+    grid-row => same
+    grid-area => grid-row-start  / grid-col-start / grid-row-end / grid-col-end
+
+    
+*/
+.par{
+    display: grid;
+    grid-template-columns: repeat(3,25%) ;
+    /* background-color: #EEE; */
+    /* row-gap: 5px ;
+    column-gap: 5px; */
+    gap: 5px 10px ;
+}
+.par div{
+    background-color: #EEE;
+    /* margin : 1px */
+}
+/* .page{
+    background-color: #EEE;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-areas:"logo nav nav nav nav"
+                        "cont cont cont cont side"
+                        "foot foot foot foot foot";
+    grid-template-rows: 8% auto 8%;
+    
+}
+.page h2{
+    grid-area: logo;
+    background-color: aqua;
+}
+.page nav {
+    grid-area: nav;
+    background-color: antiquewhite;
+}
+.page section{
+    grid-area: cont;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page aside{
+    grid-area: side;
+    background-color: beige;
+}
+.page footer{
+    grid-area: foot;
+    background-color: aliceblue;
+}
+li{
+    display: inline-block;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.grid-col{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2px 2px;
+}
+.grid-col div{
+    background-color: #EEE;
+} */
+ /***********************************************/
+ /*
+ 2-D transform
+    1- transform : scaleX(multiplier) | scale(,)
+    2- transform : rotate(angle)
+    3- transform : translate(x,y)
+    4- transform : skew(angle)
+    5- transform : matrix(scalex, skewy , skewx, scaley, translateX, translateY)
+    6- transform-origin : (x,y)
+*/
+
+/*
+CSS selectors
+    1- * --all elements
+    2- element name
+    3- element otherelement
+    4- .classname
+    5- #idname
+    6- .class-one.class-two //some element has two classes
+    7- div.class-one // div has class one
+    8- gp1 , gp2
+    9- .class-name > child // direct child 
+    10- class-name + target-class 
+    11- class-name ~ target-class // sibling selector
+    12- [attribute] || [attribute=val] // all elements with this attribute
+    13- element[attribute=val]
+    14 :first-child , :last-child , :nth-child(n) ,nth-last-child(n) : first-of-type
+    15- :only-child , :only-of-type
+
+*/
